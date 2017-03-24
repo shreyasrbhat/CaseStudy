@@ -4,7 +4,7 @@
    <bean id = "helloWorld" class = "com.HelloWorld">
       <property name = "message" value = "Hello World!"/>
       </bean>
-      <bean id="address" class="com.Address">
+      <bean id="acddress" class="com.Address">
       <constructor-arg value="Bangalore"></constructor-arg>
       <constructor-arg value="Karnataka"></constructor-arg>
       <constructor-arg value="India"></constructor-arg>
