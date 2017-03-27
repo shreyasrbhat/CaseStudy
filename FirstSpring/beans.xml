@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="helloWorld" class="com.HelloWorld"></bean>
+	<bean id="person" class="com.Person">
+		<property name="firstName" value="Martin"></property>
+		<property name="lastName" value="Freeman"></property>
+	</bean>
+	<bean id="car" class="com.Car">
+		<property name="name" value="i10"></property>
+		<property name="perDaycost" value="10000"></property>
+	</bean>
+	<bean id="user" class="com.User">
+		<property ref="car" name="car"></property>
+	</bean>
+	<bean id="student" class="com.Student" autowire="constructor">
+		<constructor-arg name="name1" value="Ramesh"></constructor-arg>
+		<constructor-arg name="id" value="1234"></constructor-arg>
+		
+	</bean>
+	<bean id="hostel" class="com.Hostel">
+		<property name="hostelName" value="westwood"></property>
+		<property name="city" value="bangalore"></property>
+	</bean>
+	<bean id="book" class="com.Book">
+		<property name="name" value="ABC"></property>
+		<property name="author" value="XYZ"></property>
+		<property name="noOfPages" value="100"></property>
+	</bean>
+	<bean id="ebook" class="com.Ebook" parent="book">
+		<property name="size" value="2.5"></property>
+	</bean>
+	<bean id="book2" parent="book">
+	<property name="name" value="LMN"></property></bean>
+</beans>
